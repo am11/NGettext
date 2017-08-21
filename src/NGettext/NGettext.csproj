@@ -25,6 +25,9 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <FrameworkPathOverride Condition=" '$(FrameworkPathOverride)' == '' AND ('$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net20') ">
+      $(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client
+    </FrameworkPathOverride>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net40+sl5+win8+wp8' ">
